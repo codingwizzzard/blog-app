@@ -35,7 +35,7 @@ const AddBlog = () => {
     data.append("image", formData.image);
 
     try {
-      const response = await axios.post("http://localhost:8000/api/add", data, {
+      const response = await axios.post("https://blog-app-backend-sigma.vercel.app/api/add", data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

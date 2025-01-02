@@ -12,7 +12,7 @@ const SingleBlog = () => {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/blog/${id}`);
+        const response = await axios.get(`https://blog-app-backend-sigma.vercel.app/api/blog/${id}`);
         setBlog(response.data);
         setLoading(false);
       } catch (error) {
@@ -44,7 +44,7 @@ const SingleBlog = () => {
           <div className="row g-lg-4 gy-5">
             <div className="col-12">
               <div className="post-thump text-center">
-                <a href="">  <img src={`http://localhost:8000/${blog.image}`} alt={blog.title} height={500} width={500} /></a>
+                <a href="">  <img src={`https://blog-app-backend-sigma.vercel.app/${blog.image}`} alt={blog.title} height={500} width={500} /></a>
               </div>
               <ul className="post-meta">
                 <li>
