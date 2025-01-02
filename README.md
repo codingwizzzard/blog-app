@@ -92,5 +92,6 @@ Contributions are welcome! Please follow these steps:
 
 ## Deployment Links : 
 Backend : https://blog-app-backend-sigma.vercel.app
+Frontend : https://blog-app-chi-amber.vercel.app
 
 This structure mimics the one you had for the task management system but focuses on features relevant to a blog application. Let me know if you need further adjustments!
