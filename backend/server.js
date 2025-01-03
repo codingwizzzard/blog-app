@@ -8,8 +8,8 @@ const blogRoutes = require("./routes/blog.route.js");
 
 const PORT = process.env.PORT;
 
-app.use('*',cors({
-    origin: "*",
+app.use(cors({
+    origin: "https://blog-app-chi-amber.vercel.app",
     methods: 'GET,POST,PUT,DELETE',
     allowedHeaders: 'Content-Type, Authorization',
 }))
