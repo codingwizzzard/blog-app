@@ -22,6 +22,6 @@ app.use("/uploads",express.static("uploads"))
 app.use("/api",blogRoutes)
 
 app.listen(PORT, () => {
-    db()
+    db();
     console.log(`Server is running on http://localhost:${PORT}`);
 });
