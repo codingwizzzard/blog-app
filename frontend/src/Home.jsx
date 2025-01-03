@@ -15,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("https://blog-app-backend-sigma.vercel.app/api/blogs");
+        const response = await axios.get("http://localhost:8000/api/blogs");
         setBlogs(response.data);
       } catch (err) {
         setError("Error fetching blogs");
@@ -27,7 +27,7 @@ const Home = () => {
 
   const deleteBlog = async (id) => {
     try {
-      await axios.delete(`https://blog-app-backend-sigma.vercel.app/api/blog/${id}`);
+      await axios.delete(`http://localhost:8000/api/blog/${id}`);
       setBlogs((prevBlogs) => prevBlogs.filter((blog) => blog._id !== id));
       setToastMessage("Blog deleted successfully!");
       setShowToast(true);
@@ -67,7 +67,7 @@ const Home = () => {
                       <Link to={`/blog/${blog._id}`} className="text-decoration-none">
                         <div className="card shadow-lg border-0 h-100 rounded-3 hover-card">
                           <img
-                            src={`https://blog-app-backend-sigma.vercel.app/${blog.image}`}
+                            src={`http://localhost:8000/${blog.image}`}
                             alt={blog.title}
                             ref={fileInputRef}
                             className="card-img-top rounded-top"

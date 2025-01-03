@@ -20,7 +20,7 @@ const EditBlog = () => {
   useEffect(() => {
     const fetchBlog = async () => {
         try {
-            const response = await axios.get(`https://blog-app-backend-sigma.vercel.app/api/blog/${id}`);
+            const response = await axios.get(`http://localhost:8000/api/blog/${id}`);
             const { title, name, category, description, image } = response.data;
             setFormData({ title, name, category, description, image: null });
             setExistingImage(image);
@@ -62,7 +62,7 @@ const EditBlog = () => {
         data.append("image", formData.image);
     }
     try {
-      const response = await axios.put(`https://blog-app-backend-sigma.vercel.app/api/blog/${id}`, data, {
+      const response = await axios.put(`http://localhost:8000/api/blog/${id}`, data, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
